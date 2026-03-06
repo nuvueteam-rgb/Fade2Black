@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import AnimateIn from "./AnimateIn";
 import BeforeAfterSlider from "./BeforeAfterSlider";
 
@@ -20,6 +21,22 @@ export default function WindowTinting() {
             with over 10 years of experience. Whether it&apos;s a car you bought from us or one you
             already own — Kevin will make it look right.
           </p>
+        </AnimateIn>
+
+        {/* Tint work showcase image */}
+        <AnimateIn className="mb-12">
+          <div className="relative w-full aspect-[21/9] overflow-hidden border border-dark-light/50">
+            <Image
+              src="/tint-work.jpg"
+              alt="Dark tinted vehicle — professional window tinting by Fade 2 Black"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60" />
+            <div className="absolute bottom-4 left-6 bg-black/70 text-white font-body text-xs uppercase tracking-wider px-3 py-1.5">
+              Professional Ceramic Tint
+            </div>
+          </div>
         </AnimateIn>
 
         <div className="grid lg:grid-cols-2 gap-10 items-start">

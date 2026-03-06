@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import AnimateIn from "./AnimateIn";
 
 export default function About() {
@@ -8,17 +9,26 @@ export default function About() {
       <div className="section-divider mb-24" />
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Photo placeholder */}
+          {/* Photo */}
           <AnimateIn direction="left">
             <div className="relative">
               <div className="aspect-[4/5] bg-dark border border-dark-light/50 overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-dark-light to-dark flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-dark-light border-2 border-red/30 flex items-center justify-center">
-                      <span className="font-heading text-5xl text-red">AE</span>
+                <Image
+                  src="/austin.jpg"
+                  alt="Austin Easter — Owner of Fade 2 Black"
+                  fill
+                  className="object-cover object-top"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6">
+                  <div className="flex items-center gap-4">
+                    <div className="w-16 h-16 rounded-full bg-black/70 border-2 border-red/50 flex items-center justify-center flex-shrink-0">
+                      <span className="font-heading text-3xl text-red">AE</span>
                     </div>
-                    <p className="font-heading text-2xl text-white">Austin Easter</p>
-                    <p className="font-body text-sm text-silver">Owner & Operator</p>
+                    <div>
+                      <p className="font-heading text-2xl text-white">Austin Easter</p>
+                      <p className="font-body text-sm text-silver">Owner & Operator</p>
+                    </div>
                   </div>
                 </div>
               </div>

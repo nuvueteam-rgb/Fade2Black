@@ -1,20 +1,21 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 export default function Hero() {
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      {/* Background image */}
-      <Image
-        src="/hero.jpg"
-        alt="Premium pre-owned vehicle"
-        fill
-        className="object-cover"
-        priority
-        quality={90}
-      />
+      {/* Background video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster="/hero-poster.jpg"
+        className="absolute inset-0 w-full h-full object-cover scale-90"
+      >
+        <source src="/hero-video.mp4" type="video/mp4" />
+      </video>
 
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black z-10" />

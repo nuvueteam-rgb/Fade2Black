@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import AnimateIn from "./AnimateIn";
 
 const trustPoints = [
@@ -25,6 +26,12 @@ const trustPoints = [
   },
 ];
 
+const featuredCars = [
+  { src: "/car1.jpg", alt: "Black sedan on the lot" },
+  { src: "/car2.jpg", alt: "Red sports car" },
+  { src: "/car3.jpg", alt: "Dark SUV" },
+];
+
 export default function CarSales() {
   return (
     <section id="inventory" className="relative py-28 bg-black-soft carbon-fiber-bg">
@@ -44,6 +51,26 @@ export default function CarSales() {
             personally inspected and detailed by Austin — no surprises, no pressure.
           </p>
         </AnimateIn>
+
+        {/* Featured vehicle images */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16">
+          {featuredCars.map((car, i) => (
+            <AnimateIn key={car.src} delay={i * 0.1}>
+              <div className="relative aspect-[16/10] overflow-hidden border border-dark-light/50 group">
+                <Image
+                  src={car.src}
+                  alt={car.alt}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute bottom-3 left-3 bg-black/70 text-white font-body text-xs uppercase tracking-wider px-3 py-1.5">
+                  Sample Inventory
+                </div>
+              </div>
+            </AnimateIn>
+          ))}
+        </div>
 
         {/* Massive Facebook CTA */}
         <AnimateIn>
