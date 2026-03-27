@@ -86,7 +86,7 @@ export default function About() {
               {/* Social link */}
               <div className="mt-8">
                 <a
-                  href="https://www.facebook.com/austin.easter.371059"
+                  href="https://www.facebook.com/austin.easter.371059/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 font-body text-sm uppercase tracking-wider text-silver hover:text-red transition-colors"
