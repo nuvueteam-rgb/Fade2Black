@@ -41,15 +41,6 @@ const trustPoints = [
       </svg>
     ),
   },
-  {
-    title: "Inspected & Detailed",
-    desc: "Thorough mechanical inspection and professional detail before you ever see it.",
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17l-5.384-3.19c-.063-.037-.064-.142 0-.18L11.42 8.83a1.002 1.002 0 011.16 0l5.384 3.19c.063.037.064.142 0 .18l-5.384 3.19a1.002 1.002 0 01-1.16 0zM12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25z" />
-      </svg>
-    ),
-  },
 ];
 
 export default function CarSales() {
@@ -164,7 +155,7 @@ export default function CarSales() {
 
         {/* Trust points */}
         <AnimateIn>
-          <div className="grid grid-cols-2 lg:grid-cols-5 gap-px bg-dark-light/30 border border-dark-light/50 overflow-hidden">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-dark-light/30 border border-dark-light/50 overflow-hidden">
             {trustPoints.map((point) => (
               <div
                 key={point.title}
