@@ -52,12 +52,6 @@ const trustPoints = [
   },
 ];
 
-const featuredCars = [
-  { src: "/car1.jpg", alt: "Audi sedan", label: "Audi Sedan" },
-  { src: "/car2.jpg", alt: "GMC truck", label: "GMC Truck" },
-  { src: "/car3.jpg", alt: "Chevrolet Silverado", label: "Chevrolet Silverado" },
-];
-
 export default function CarSales() {
   return (
     <section id="inventory" className="relative py-28 bg-black-soft carbon-fiber-bg">
@@ -78,81 +72,90 @@ export default function CarSales() {
           </p>
         </AnimateIn>
 
-        {/* Inventory cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          {featuredCars.map((car, i) => (
-            <AnimateIn key={car.src} delay={i * 0.1}>
-              <a
-                href="https://www.facebook.com/austin.easter.371059/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group block bg-dark border border-dark-light/50 hover:border-red/50 overflow-hidden transition-all duration-500"
-              >
-                <div className="relative aspect-[16/10] overflow-hidden">
-                  <Image
-                    src={car.src}
-                    alt={car.alt}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                </div>
-                <div className="p-5 flex items-center justify-between">
-                  <div>
-                    <h4 className="font-heading text-xl text-white group-hover:text-red transition-colors">
-                      {car.label}
-                    </h4>
-                    <p className="font-body text-xs text-silver/60 uppercase tracking-wider mt-1">
-                      Available Now
-                    </p>
-                  </div>
-                  <span className="font-body text-sm uppercase tracking-wider text-red flex items-center gap-1.5 opacity-70 group-hover:opacity-100 transition-opacity">
-                    View Details
-                    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                    </svg>
-                  </span>
-                </div>
-              </a>
-            </AnimateIn>
-          ))}
-        </div>
-
-        {/* Massive Facebook CTA */}
+        {/* Browse Inventory CTA with background image */}
         <AnimateIn>
-          <div className="relative bg-gradient-to-br from-dark to-dark-light border border-red/40 p-10 md:p-16 text-center mb-16 overflow-hidden">
-            {/* Background glow */}
-            <div className="absolute inset-0 bg-radial-gradient pointer-events-none" style={{ background: "radial-gradient(ellipse at center, rgba(220,38,38,0.08) 0%, transparent 70%)" }} />
+          <div className="relative overflow-hidden mb-16">
+            {/* Background image */}
+            <div className="absolute inset-0">
+              <Image
+                src="/car1.jpg"
+                alt=""
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-black/80" />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/90" />
+            </div>
 
-            <div className="relative z-10">
-              <div className="flex justify-center mb-6">
-                <div className="w-20 h-20 bg-red/10 border border-red/40 rounded-full flex items-center justify-center">
-                  <svg className="w-10 h-10 text-red" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                  </svg>
-                </div>
+            <div className="relative z-10 py-16 md:py-24 px-6 md:px-16 text-center">
+              {/* Trust badges */}
+              <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-10">
+                {[
+                  {
+                    text: "500+ Cars Sold",
+                    icon: (
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+                      </svg>
+                    ),
+                  },
+                  {
+                    text: "New Vehicles Monthly",
+                    icon: (
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+                      </svg>
+                    ),
+                  },
+                  {
+                    text: "No Hidden Fees",
+                    icon: (
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                      </svg>
+                    ),
+                  },
+                  {
+                    text: "5-Star Rated",
+                    icon: (
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                      </svg>
+                    ),
+                  },
+                ].map((badge) => (
+                  <div
+                    key={badge.text}
+                    className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full"
+                  >
+                    <span className="text-red">{badge.icon}</span>
+                    <span className="font-body text-xs md:text-sm uppercase tracking-wider text-white">
+                      {badge.text}
+                    </span>
+                  </div>
+                ))}
               </div>
 
-              <h3 className="font-heading text-4xl md:text-5xl text-white mb-4">
+              <h3 className="font-heading text-5xl md:text-7xl text-white mb-4 red-glow-text">
                 BROWSE OUR <span className="text-red">INVENTORY</span>
               </h3>
-              <p className="font-body text-silver text-lg mb-8 max-w-xl mx-auto">
-                All of our current vehicles are listed on Facebook Marketplace. Browse photos, pricing, and details — then call Austin to set up a time to see it in person.
+              <p className="font-body text-silver text-lg mb-10 max-w-xl mx-auto">
+                All of our current vehicles are listed on Facebook. Browse photos, pricing, and details — then call Austin to set up a time to see it in person.
               </p>
 
               <a
                 href="https://www.facebook.com/austin.easter.371059/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-3 bg-red hover:bg-red-light text-white font-heading text-2xl md:text-3xl tracking-wider px-12 py-5 transition-colors shadow-red-glow"
+                className="inline-flex items-center justify-center gap-4 bg-red hover:bg-red-light text-white font-heading text-3xl md:text-4xl tracking-wider px-14 py-6 transition-colors shadow-red-glow"
               >
-                <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-9 h-9" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                 </svg>
-                VIEW ON FACEBOOK MARKETPLACE
+                VIEW INVENTORY
               </a>
 
-              <p className="font-body text-xs text-silver/50 mt-4 uppercase tracking-wider">
+              <p className="font-body text-xs text-white/40 mt-5 uppercase tracking-wider">
                 New vehicles added monthly &bull; Message us on Facebook or call directly
               </p>
             </div>
