@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import CarSales from "@/components/CarSales";
+import Financing from "@/components/Financing";
 import About from "@/components/About";
 import Footer from "@/components/Footer";
 
@@ -10,6 +11,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <CarSales />
+      <Financing />
       <About />
       <Footer />
     </main>
