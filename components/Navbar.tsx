@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 
 const navLinks: { label: string; href: string; isPage?: boolean }[] = [
@@ -14,6 +15,8 @@ const navLinks: { label: string; href: string; isPage?: boolean }[] = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -21,10 +24,21 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const getHref = (href: string, isPage?: boolean) => {
+    if (isPage) return href;
+    // Anchor links need full path when not on home page
+    if (!isHome && href.startsWith("#")) return `/${href}`;
+    return href;
+  };
+
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, isPage?: boolean) => {
     if (isPage) {
       setMobileOpen(false);
       return; // let normal navigation happen
+    }
+    if (!isHome) {
+      setMobileOpen(false);
+      return; // let browser navigate to /#section
     }
     e.preventDefault();
     setMobileOpen(false);
@@ -45,10 +59,12 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <a
-          href="#"
+          href="/"
           onClick={(e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: "smooth" });
+            if (isHome) {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
           }}
           className="font-heading text-3xl tracking-wider text-white hover:text-red transition-colors"
         >
@@ -60,7 +76,7 @@ export default function Navbar() {
           {navLinks.map((link) => (
             <a
               key={link.href}
-              href={link.href}
+              href={getHref(link.href, link.isPage)}
               onClick={(e) => handleClick(e, link.href, link.isPage)}
               className="font-body text-sm uppercase tracking-widest text-silver hover:text-red transition-colors"
             >
