@@ -15,7 +15,7 @@ export default function Financing() {
             FINANCING OPTIONS
           </h2>
           <p className="font-body text-lg text-silver mt-4 max-w-2xl mx-auto">
-            We&apos;ve partnered with trusted local credit unions to make buying easy.
+            We work with trusted local credit unions to help get you on the road.
             Apply online in minutes — no obligation, no impact on your credit score.
           </p>
         </AnimateIn>
