@@ -35,7 +35,7 @@ export default function Footer() {
             </h3>
             <p className="font-body text-sm text-silver leading-relaxed">
               Quality pre-owned vehicles in Indianola, Iowa.
-              Darkness is the standard.
+              Quality pre-owned vehicles and professional window tinting in Indianola, Iowa.
             </p>
           </div>
 
