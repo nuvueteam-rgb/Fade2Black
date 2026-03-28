@@ -34,7 +34,6 @@ export default function Footer() {
               FADE<span className="text-red">2</span>BLACK
             </h3>
             <p className="font-body text-sm text-silver leading-relaxed">
-              Quality pre-owned vehicles in Indianola, Iowa.
               Quality pre-owned vehicles and professional window tinting in Indianola, Iowa.
             </p>
           </div>
@@ -54,7 +53,7 @@ export default function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                 </svg>
-                Indianola, Iowa
+                1003 West 2nd Ave, Indianola, IA 50125
               </p>
               <p className="flex items-center gap-2">
                 <svg className="w-4 h-4 text-red flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
