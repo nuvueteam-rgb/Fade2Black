@@ -14,7 +14,7 @@ export default function Footer() {
               READY TO FIND YOUR <span className="text-red">RIDE</span>?
             </h2>
             <p className="font-body text-lg text-silver mb-8">
-              Call Austin today to check out our current inventory or schedule a window tinting appointment.
+              Call Austin today to check out our current inventory.
             </p>
             <a
               href="tel:+15155522660"
@@ -35,7 +35,7 @@ export default function Footer() {
               FADE<span className="text-red">2</span>BLACK
             </h3>
             <p className="font-body text-sm text-silver leading-relaxed">
-              Quality pre-owned vehicles and professional window tinting in Indianola, Iowa.
+              Quality pre-owned vehicles in Indianola, Iowa.
             </p>
           </div>
 

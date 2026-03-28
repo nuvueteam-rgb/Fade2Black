@@ -9,7 +9,7 @@ const reviews = [
     name: "Sarah M.",
   },
   {
-    quote: "Best tint job I've ever had. Kevin does incredible work.",
+    quote: "Honest pricing, great selection. Austin is the real deal.",
     name: "Jake R.",
   },
   {

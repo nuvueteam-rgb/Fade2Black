@@ -17,22 +17,19 @@ const barlow = Barlow({
 });
 
 export const metadata: Metadata = {
-  title: "Fade 2 Black | Pre-Owned Vehicles & Window Tinting in Indianola, Iowa",
+  title: "Fade 2 Black | Pre-Owned Vehicles in Indianola, Iowa",
   description:
-    "Hand-picked, quality pre-owned vehicles and professional ceramic window tinting in Indianola, Iowa. Call Austin Easter at (515) 552-2660.",
+    "Hand-picked, quality pre-owned vehicles in Indianola, Iowa. Call Austin Easter at (515) 552-2660.",
   keywords: [
-    "window tinting",
-    "car tinting",
-    "ceramic tint",
     "Indianola Iowa",
     "pre-owned cars",
     "used cars Indianola",
     "Fade 2 Black",
   ],
   openGraph: {
-    title: "Fade 2 Black | Pre-Owned Vehicles & Window Tinting in Indianola, Iowa",
+    title: "Fade 2 Black | Pre-Owned Vehicles in Indianola, Iowa",
     description:
-      "Hand-picked, quality pre-owned vehicles and professional ceramic window tinting in Indianola, Iowa. Call Austin Easter at (515) 552-2660.",
+      "Hand-picked, quality pre-owned vehicles in Indianola, Iowa. Call Austin Easter at (515) 552-2660.",
     type: "website",
     url: "https://fade2black.com",
   },

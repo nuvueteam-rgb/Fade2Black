@@ -8,7 +8,6 @@ const navLinks: { label: string; href: string; isPage?: boolean }[] = [
   { label: "Inventory", href: "#inventory" },
   { label: "Financing", href: "#financing" },
   { label: "About", href: "#about" },
-  { label: "Tinting", href: "/tinting", isPage: true },
   { label: "Contact", href: "#contact" },
 ];
 
