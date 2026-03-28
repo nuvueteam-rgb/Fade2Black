@@ -105,7 +105,7 @@ export default function Footer() {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2998.5!2d-93.5614!3d41.3578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87ee80e0a1f1a1a1%3A0x0!2s1003+West+2nd+Ave%2C+Indianola%2C+IA+50125!5e0!3m2!1sen!2sus!4v1"
             width="100%"
             height="350"
-            style={{ border: 0 }}
+            style={{ border: 0, filter: "grayscale(100%) invert(92%) contrast(83%)" }}
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
