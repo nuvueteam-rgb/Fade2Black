@@ -10,10 +10,10 @@ export default function Footer() {
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <AnimateIn>
             <h2 className="font-heading text-5xl md:text-7xl text-white mb-4 red-glow-text">
-              READY TO GO <span className="text-red">DARK</span>?
+              READY TO FIND YOUR <span className="text-red">RIDE</span>?
             </h2>
             <p className="font-body text-lg text-silver mb-8">
-              Call Austin today to check out our current vehicle inventory or ask about any of our services.
+              Call Austin today to check out our current inventory or schedule a window tinting appointment.
             </p>
             <a
               href="tel:+15155522660"
