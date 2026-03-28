@@ -79,7 +79,7 @@ export default function CarSales() {
             <div className="absolute inset-0">
               <Image
                 src="/car1.jpg"
-                alt=""
+                alt="Pre-owned vehicles for sale at Fade 2 Black in Indianola Iowa"
                 fill
                 className="object-cover"
               />

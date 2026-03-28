@@ -33,7 +33,7 @@ export default function Financing() {
               <div className="absolute inset-0 bg-gradient-to-br from-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="relative z-10">
                 <div className="w-20 h-20 mx-auto mb-5 bg-white rounded-xl flex items-center justify-center p-2">
-                  <Image src="/c1st-logo.png" alt="Community 1st Credit Union" width={64} height={64} className="object-contain" />
+                  <Image src="/c1st-logo.png" alt="Community 1st Credit Union — used car financing Indianola Iowa" width={64} height={64} className="object-contain" />
                 </div>
                 <h3 className="font-heading text-2xl md:text-3xl text-white mb-3">
                   COMMUNITY 1ST CREDIT UNION
@@ -57,7 +57,7 @@ export default function Financing() {
               <div className="absolute inset-0 bg-gradient-to-br from-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="relative z-10">
                 <div className="w-20 h-20 mx-auto mb-5 bg-white rounded-xl flex items-center justify-center p-2">
-                  <Image src="/marine-logo.png" alt="Marine Credit Union" width={64} height={64} className="object-contain" />
+                  <Image src="/marine-logo.png" alt="Marine Credit Union — used car financing Indianola Iowa" width={64} height={64} className="object-contain" />
                 </div>
                 <h3 className="font-heading text-2xl md:text-3xl text-white mb-3">
                   MARINE CREDIT UNION

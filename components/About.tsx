@@ -15,7 +15,7 @@ export default function About() {
               <div className="aspect-[4/5] bg-dark border border-dark-light/50 overflow-hidden">
                 <Image
                   src="/austin.jpg"
-                  alt="Austin Easter — Owner of Fade 2 Black"
+                  alt="Austin Easter — Owner of Fade 2 Black pre-owned vehicles in Indianola Iowa"
                   fill
                   className="object-cover object-top"
                 />
