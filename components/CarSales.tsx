@@ -135,7 +135,7 @@ export default function CarSales() {
               </p>
 
               <a
-                href="https://www.facebook.com/austin.easter.371059/"
+                href="https://www.facebook.com/marketplace/profile/100094782047411/?ref=permalink&mibextid=6ojiHh"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-4 bg-red hover:bg-red-light text-white font-heading text-3xl md:text-4xl tracking-wider px-14 py-6 transition-colors shadow-red-glow"
