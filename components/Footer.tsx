@@ -1,6 +1,5 @@
 "use client";
 
-import AnimateIn from "./AnimateIn";
 import DarkMap from "./DarkMap";
 
 export default function Footer() {
