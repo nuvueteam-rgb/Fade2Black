@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Bebas_Neue, Barlow } from "next/font/google";
 import "./globals.css";
 
@@ -15,6 +15,13 @@ const barlow = Barlow({
   variable: "--font-barlow",
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
 
 export const metadata: Metadata = {
   title: "Fade 2 Black | Pre-Owned Vehicles in Indianola, Iowa",

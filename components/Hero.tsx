@@ -12,7 +12,7 @@ export default function Hero() {
         loop
         playsInline
         poster="/hero-poster.jpg"
-        className="absolute inset-0 w-full h-full object-cover scale-90"
+        className="absolute inset-0 w-full h-full object-cover"
       >
         <source src="/hero-video.mp4" type="video/mp4" />
       </video>
