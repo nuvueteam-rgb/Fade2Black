@@ -119,22 +119,22 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu — full screen overlay */}
       {mobileOpen && (
         <motion.div
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: "auto" }}
-          exit={{ opacity: 0, height: 0 }}
-          className="md:hidden bg-black/98 border-t border-dark-light/50"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="md:hidden fixed inset-0 top-0 bg-black z-40"
         >
-          <div className="px-6 py-6 flex flex-col gap-4">
+          <div className="flex flex-col items-start justify-center h-full px-10 gap-6">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={(e) => handleClick(e, link.href, link.isPage)}
-                className={`font-body text-lg uppercase tracking-widest transition-colors ${
-                  pathname === link.href ? "text-red" : "text-silver hover:text-red"
+                className={`font-heading text-4xl uppercase tracking-widest transition-colors ${
+                  pathname === link.href ? "text-red" : "text-white hover:text-red"
                 }`}
               >
                 {link.label}
@@ -142,7 +142,7 @@ export default function Navbar() {
             ))}
             <a
               href="tel:+15158683990"
-              className="bg-red hover:bg-red-light text-white font-body text-center uppercase tracking-wider px-5 py-3 mt-2 transition-colors shadow-red-glow"
+              className="bg-red hover:bg-red-light text-white font-body text-center uppercase tracking-wider px-8 py-4 mt-4 transition-colors shadow-red-glow w-full"
             >
               Call Now
             </a>
